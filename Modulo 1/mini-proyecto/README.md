@@ -1,14 +1,25 @@
 # Conversor de unidades
 
-Mini-proyecto del Módulo I (Fundamentos de JavaScript). Convierte valores de temperatura y longitud mediante un menú interactivo.
+Mini-proyecto evaluable del Módulo I (Fundamentos de JavaScript). Convierte valores de temperatura y longitud mediante un menú interactivo que se ejecuta en el navegador.
+
+**Autor:** Juan Manuel Alferez Amado
+**Ficha:** 3410706
+
+## Estructura del proyecto
+
+```text
+mini-proyecto-js/
+├── index.html
+├── app.js
+└── README.md
+```
 
 ## Cómo ejecutarlo
 
-1. Abre la carpeta `mini-proyecto` en Visual Studio Code.
-2. Haz clic derecho en `index.html` y elige **Open with Live Server** (o presiona **Go Live**).
-3. Aparecerá el menú en una ventana emergente. Escribe el número de la opción.
-
-Para ver el historial de resultados, abre la consola del navegador con `F12`.
+1. Abre la carpeta `mini-proyecto-js` en Visual Studio Code.
+2. Haz clic derecho en `index.html` y elige **Open with Live Server** (o presiona **Go Live**). También puedes abrir `index.html` con doble clic en el navegador.
+3. Aparecerá el menú en una ventana emergente. Escribe el número de la opción y presiona Aceptar.
+4. Para ver el historial de resultados, abre la consola del navegador con `F12`.
 
 ## Menú
 
@@ -20,34 +31,17 @@ Para ver el historial de resultados, abre la consola del navegador con `F12`.
 | 4 | Kilómetros a metros |
 | 5 | Salir |
 
-## Validaciones
-
-- Se rechazan entradas vacías.
-- Se rechaza texto que no sea número.
-- Se rechazan valores no finitos (`Infinity`, `NaN`).
-- Se permiten temperaturas negativas.
-- Se rechazan longitudes negativas.
-- Una opción de menú inexistente muestra "Opción inválida" y vuelve a mostrar el menú.
+El menú se repite después de cada conversión hasta que se elige la opción 5.
 
 ## Fórmulas
 
-- F = (C × 9 / 5) + 32
-- C = (F − 32) × 5 / 9
-- km = m / 1000
-- m = km × 1000
+| Conversión | Fórmula |
+|------------|---------|
+| Celsius a Fahrenheit | F = (C × 9 / 5) + 32 |
+| Fahrenheit a Celsius | C = (F − 32) × 5 / 9 |
+| Metros a kilómetros | km = m / 1000 |
+| Kilómetros a metros | m = km × 1000 |
 
-## Registro de pruebas
+## Validaciones
 
-| Entrada | Esperado | Obtenido | Estado |
-|---------|----------|----------|--------|
-| 0 °C a °F | 32 °F | | |
-| 100 °C a °F | 212 °F | | |
-| 32 °F a °C | 0 °C | | |
-| 1500 m a km | 1,5 km | | |
-| 2,5 km a m | 2500 m | | |
-| -10 °C a °F | 14 °F | | |
-| -5 m a km | Error: longitud inválida | | |
-| abc | Error: valor no numérico | | |
-| (vacío) | Solicitar valor válido | | |
-| Opción 9 | Opción inválida, mostrar menú | | |
-| Opción 5 | Salir del programa | | |
+- Se rechazan entradas
