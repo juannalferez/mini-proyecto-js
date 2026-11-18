@@ -277,5 +277,24 @@
 
     console.log(`Números ordenados de menor a mayor: ${numerosOrdenados}`); // Muestra los números ordenados
 
+
+
+
+    const empleados = [
+        {id: 3, nombre: "Ana", salario: 3000},
+        {id: 1, nombre: "Luis", salario: 5000},
+        {id: 2, nombre: "Carlos", salario: 4000}
+        {id: 4, nombre: "Marta", salario: 6000}
+    ];
+
+
+// 1. obtener un arreglo con solamente nommbres  usando map
+// 2. obteener empleados activos utilizando filter
+// 3. encontrar el empleado con id=3 mediante find
+// 4. determinar si existe un salario superior a 7000 mediante some
+// 5. verificar si todos los salarios son mayores a cero  usando every
+// 6. calcular la suma de los salarios usando reduce
+// 7. ordenar los empleados por salario de menor a mayor usando sort
+
     
 
