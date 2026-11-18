@@ -209,3 +209,73 @@
     console.log(tarea); // Muestra el objeto original tarea
     console.log(actualizarTarea); // Muestra el nuevo objeto actualizarTarea con la propiedad completado actualizada
     console.log(actualizarTarea.completado); // Muestra el valor de la propiedad completado del objeto actualizarTarea
+
+
+    //METODOS DE PROCESAMIENTO DE COLECCIONES
+
+    //METODO MAP
+
+    const precios3 = [1000, 2000, 3000, 4000, 5000];
+
+    const preciosConImpuesto = precios3.map(precio => precio * 1.19); // Aplica un impuesto del 19% a cada precio usando el método map
+
+    console.log(preciosConImpuesto); // Muestra el nuevo array preciosConImpuesto con los precios actualizados
+
+    //METOOD FILTER
+
+    const edadesDos = [15, 22, 18, 30, 12, 25];
+
+    const mayoresDeEdad = edadesDos.filter(edad => edad >= 18); // Filtra las edades mayores o iguales a 18 usando el método filter
+
+
+
+    const productosDos = [
+        { nombre: "Laptop", precio: 10000 },
+        { nombre: "Mouse", precio: 5000 },
+        { nombre: "Teclado", precio: 3000 },
+        { nombre: "Monitor", precio: 2000 }
+    ];
+
+    const productosCaros = productosDos.filter(producto => producto.precio > 4000); // Filtra los productos con precio mayor a 4000 usando el método filter
+
+    console.log(productosCaros); // Muestra el nuevo array productosCaros con los productos filtrados
+
+    //METODO FIND
+
+    const encontrado = productosDos.find(producto => producto.nombre === "Mouse"); // Busca el primer producto con el nombre "Mouse" usando el método find
+
+    console.log(encontrado); // Muestra el producto encontrado
+
+    //METODO SOME y EVERY
+
+    const notas = [85, 90, 78, 92, 88];
+
+    const hayAprobados = notas.some(nota => nota >= 60); // Verifica si hay alguna nota aprobatoria usando el método some
+
+    console.log(`¿Hay alguna nota aprobatoria? ${hayAprobados}`); // Muestra true si hay alguna nota aprobatoria, de lo contrario false
+
+    //metodo every
+
+    const todasAprobadas = notas.every(nota => nota >= 60); // Verifica si todas las notas son aprobatorias usando el método every
+
+    console.log(`¿Todas las notas son aprobatorias? ${todasAprobadas}`); // Muestra true si todas las notas son aprobatorias, de lo contrario false
+
+
+    //METODO REDUCE
+
+    const ventas = [1000, 2000, 3000, 4000, 5000];
+
+    const totalVentas = ventas.reduce((acumulador, venta) => acumulador + venta, 0); // Calcula el total de ventas usando el método reduce
+
+    console.log(`El total de ventas es: ${totalVentas}`); // Muestra el total de ventas
+
+    //METODO SORT
+
+    const numerosDos = [5, 2, 9, 1, 5, 6];
+
+    const numerosOrdenados = numerosDos.sort((a, b) => a - b); // Ordena los números de menor a mayor usando el método sort
+
+    console.log(`Números ordenados de menor a mayor: ${numerosOrdenados}`); // Muestra los números ordenados
+
+    
+
